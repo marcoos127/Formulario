@@ -1,0 +1,75 @@
+#inter1 {
+	border-style: solid; 
+	border-width: 0px;
+	border-color: gray;
+	background-color: #DCDCDC;
+	margin-top: 0px;
+}
+#inter2 {
+	position: relative;
+	top:20px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #DCDCDC;
+	margin-top: 1px;
+	border-color: #DCDCDC;
+}
+#p2 {
+	position: relative;
+	padding: 5px;
+	margin-bottom: 0px;
+}
+#p1 {
+	margin-top: 20px;
+}
+#bloco1 {
+	border-style: solid;
+	margin-top: 25px;
+	border-width: 2px;
+}
+#borda2 {
+	position: relative;
+	top:20px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #DCDCDC;
+	margin-top: 1px;
+	border-color: #DCDCDC;
+}
+#bloco2 {
+	border-style: solid;
+	margin-top: 25px;
+	border-width: 2px;
+}
+#borda3 {
+	position: relative;
+	top:20px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #DCDCDC;
+	margin-top: 1px;
+	border-color: #DCDCDC;
+}
+#bloco3 {
+	border-style: solid;
+	margin-top: 25px;
+	border-width: 2px;
+}
+#p1 {
+	padding: 5px;
+}
+#p3 {
+	padding: 5px;
+	margin-bottom: 0px;
+}
+#pa {
+	padding: 5px;
+	margin-bottom: 1px;
+}
+input {
+	background-color:#F0F8FF ;
+	border: none;
+}
+body {
+	font-family: arial;
+}

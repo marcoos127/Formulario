@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário</title>
+	<script href="js/funcoes.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+	<p id="p2"><b>Formulário de Solicitação de informação <i>(Pessoa Física)</i></b></p>
+	<div id="inter1"> </div>	
+	<div id="inter2">As informações abaixo são obrigatórias
+	</div>
+	<div id="bloco1">
+		<form action="">
+			<p id="p1"><b>Nome</b>: <input type="text" name="nome" value="" size= 95 pattern="[a-z\s]+$" required="required"><br></p>
+			<p id="p3"><b>CPF:</b>    <input id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="18" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span></p><br>
+			 Ou, se preferir, informar outro documento de identificação (RG, CNH, Passaporte, RNE ou outro documento válido.  Se a opção for por RG, indicar órgão emissor e UF):
+			<p id="pa"><b>Tipo do documento:</b> <input type="text" name="tipodoc"><b> Nº:</b> <input type="text" name="number">
+			<p id="ime"> <b>Endereco eletronico (e-mail):</b> <input type="e-mail" name="email" size="74"><p><b> ou</b></p>
+			<p id="pa"><b>Endereco físico (Rua, nº, complemento, Bairro):</b><br> <input type="text" name="endereco" size= 75>
+			<p id="pa"><b>Cidade:</b> <input type="text" name="cidade" size= 35><b> Estado</b>: 
+			<select name="estados-brasil">
+	<option value="">Selecione</option>
+	<option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espírito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraíba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantins</option>
+		</select>
+		 UF: <select name="uf" id="uf">
+	<option value="">Selecione</option>
+	<option value="AC">AC</option>
+	<option value="AL">AL</option>
+	<option value="AM">AM</option>
+	<option value="AP">AP</option>
+	<option value="BA">BA</option>
+	<option value="CE">CE</option>
+	<option value="DF">DF</option>
+	<option value="ES">ES</option>
+	<option value="GO">GO</option>
+	<option value="MA">MA</option>
+	<option value="MG">MG</option>
+	<option value="MS">MS</option>
+	<option value="MT">MT</option>
+	<option value="PA">PA</option>
+	<option value="PB">PB</option>
+	<option value="PE">PE</option>
+	<option value="PI">PI</option>
+	<option value="PR">PR</option>
+	<option value="RJ">RJ</option>
+	<option value="RN">RN</option>
+	<option value="RS">RS</option>
+	<option value="RO">RO</option>
+	<option value="RR">RR</option>
+	<option value="SC">SC</option>
+	<option value="SE">SE</option>
+	<option value="SP">SP</option>
+	<option value="TO">TO</option>
+ 			</select>
+			<p id="pa"><b>CEP: </b>    <input type="nº" name="cep"> <b>País: </b><input type="text" name="pais" size = 57>
+			</div>
+			<div id="borda2"><b>Os campos a seguir são opcionais e se preenchidos contribuirão para a melhoria de nossos serviços</b></div>
+			<div id="bloco2">
+			 <b>Sexo: </b><input type="radio" name="sexo" value="masculino"> Masculino <input type="radio" name="sexo" value="feminino">  Feminino      Data de nascimento:<input type="date" name=""><br>
+			<table>
+			<th>Escolaridade</th>
+			<tr><td><input type="radio" name="esc" value="seminst">Sem instrução formal</td>
+			<td><input type="radio" name="esc" value="es"> Ensino Superior</td>
+			<td><input type="radio" name="esc" value="ef"> Doutorado</td></tr>
+			<tr><td><input type="radio" name="esc" value="ef">Ensino Fundamental</td>
+			<td><input type="radio" name="esc" value="esp">
+			Especialização</td>
+			<td><input type="radio" name="esc" value="em">Ensino Médio</td></tr>
+			<td><input type="radio" name="esc">Mestrado</td>
+			 	</table>
+			<p><b>Ocupação Principal / Profissão</b></p>
+				<table>
+				<tr><td><input type="radio" name="opp" value="empsp">Empregado - setor privado</td>
+				<td><input type="radio" name="opp" value="pesq">Pesquisador</td>
+				<td><input type="radio" name="opp" value="svpe"> Servidor público estadual</td></tr>
+			    <tr><td><input type="radio" name="opp" value="jrnl">Jornalista</td>
+			    <td><input type="radio" name="opp" value="prfs">Professor</td>
+			    <td><input type="radio" name="opp" value="svm"> Servidor público municipal</td></tr>
+			    <tr><td><input type="radio" name="opp" value="mpp">Membro de partido político</td>
+			    <td><input type="radio" name="opp" value="est">Estudante</td>
+			    <td><input type="radio" name="opp" value="mon"> Membro de ONG nacional</td>
+			    </tr>
+			    <tr><td><input type="radio" name="opp" value="rpst">Representante de Sindicato</td>
+				<td><input type="radio" name="opp" value="emp">Empresário/empreendedor</td>
+				<td><input type="radio" name="opp" value="moi"> Membro de ONG internacional</td></tr>
+			    <tr><td><input type="radio" name="opp" value="pla">Profis. Liberal/autônomo</td>
+				<td><input type="radio" name="opp" value="spf"> Servidor público federal</td></tr>
+			    <tr><td><input type="radio" name="opp" value="out">Outras</td></tr>
+				</table> 
+			<p><b> Telefone</b> (<input type="text" maxlength="2"
+			size="2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>) <input type="text" maxlength="10" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>
+			</div>
+			<div id="borda3"><b>Especificação do pedido de acesso à informação</b></div>
+			<div id="bloco3">
+				<p><b> Órgão/Entidade destinatário do pedido: </b><br>  <input type="text" name="oedp" size = 100></p>
+				<p> <b>Forma preferencial de recebimento da resposta</b><br><input type="radio" name="fp" value="bcp"> Buscar/Consultar Pessoalmente <input type="radio" name="fp" value="eml"> E-mail <input type="radio" name="fp" value="pc"> Por carta (com custo)</p>
+				<p><b> Especificação do pedido: </b>  <br>  <textarea name="message" rows="10" cols="70"></textarea>
+		</form>	
+</body>
+</html>
