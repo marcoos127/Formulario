@@ -1,60 +1,39 @@
-function is_cpf (c) {
-
-  if((c = c.replace(/[^\d]/g,"")).length != 11)
-    return false
-
-  if (c == "00000000000")
-    return false;
-
-  var r;
-  var s = 0;
-
-  for (i=1; i<=9; i++)
-    s = s + parseInt(c[i-1]) * (11 - i);
-
-  r = (s * 10) % 11;
-
-  if ((r == 10) || (r == 11))
-    r = 0;
-
-  if (r != parseInt(c[9]))
-    return false;
-
-  s = 0;
-
-  for (i = 1; i <= 10; i++)
-    s = s + parseInt(c[i-1]) * (12 - i);
-
-  r = (s * 10) % 11;
-
-  if ((r == 10) || (r == 11))
-    r = 0;
-
-  if (r != parseInt(c[10]))
-    return false;
-
-  return true;
+function verificarCPF(c){
+    var i;
+    s = c;
+    var c = s.substr(0,9);
+    var dv = s.substr(9,2);
+    var d1 = 0;
+    var v = false;
+ 
+    for (i = 0; i < 9; i++){
+        d1 += c.charAt(i)*(10-i);
+    }
+    if (d1 == 0){
+        alert("CPF Inválido")
+        v = true;
+        return false;
+    }
+    d1 = 11 - (d1 % 11);
+    if (d1 > 9) d1 = 0;
+    if (dv.charAt(0) != d1){
+        alert("CPF Inválido")
+        v = true;
+        return false;
+    }
+ 
+    d1 *= 2;
+    for (i = 0; i < 9; i++){
+        d1 += c.charAt(i)*(11-i);
+    }
+    d1 = 11 - (d1 % 11);
+    if (d1 > 9) d1 = 0;
+    if (dv.charAt(1) != d1){
+        alert("CPF Inválido")
+        v = true;
+        return false;
+    }
+    if (!v) {
+        alert(c + "nCPF Válido")
+    }
 }
-
-
-function fMasc(objeto,mascara) {
-obj=objeto
-masc=mascara
-setTimeout("fMascEx()",1)
-}
-
-  function fMascEx() {
-obj.value=masc(obj.value)
-}
-
-function mCPF(cpf){
-cpf=cpf.replace(/\D/g,"")
-cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
-cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
-cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
-return cpf
-}
-
-cpfCheck = function (el) {
-    document.getElementById('cpfResponse').innerHTML = is_cpf(el.value)? '<span style="color:green">válido</span>' : '<span style="color:red">inválido</span>';
-    if(el.value=='') document.getElementById('cpfResponse').innerHTML = '';}

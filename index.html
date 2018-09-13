@@ -2,23 +2,24 @@
 <html>
 <head>
 	<title>Formulário</title>
-	<script href="js/funcoes.js"></script>
+	<script type ="text/javascript" src="js/funcoes.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
-	<p id="p2"><b>Formulário de Solicitação de informação <i>(Pessoa Física)</i></b></p>
+	<img id="logo" src="logo.png">
+	<p id="p2"><b>Formulário de Solicitação de informação <i>(Pessoa Física)</i></b></p>	
 	<div id="inter1"> </div>	
 	<div id="inter2">As informações abaixo são obrigatórias
 	</div>
 	<div id="bloco1">
 		<form action="">
 			<p id="p1"><b>Nome</b>: <input type="text" name="nome" value="" size= 95 pattern="[a-z\s]+$" required="required"><br></p>
-			<p id="p3"><b>CPF:</b>    <input id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="18" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span></p><br>
+			<p id="p3"><b>CPF: </b><input type="text" name="cpf" maxlength="11" onblur="return verificarCPF(this.value)"/></p><br>
 			 Ou, se preferir, informar outro documento de identificação (RG, CNH, Passaporte, RNE ou outro documento válido.  Se a opção for por RG, indicar órgão emissor e UF):
-			<p id="pa"><b>Tipo do documento:</b> <input type="text" name="tipodoc"><b> Nº:</b> <input type="text" name="number">
-			<p id="ime"> <b>Endereco eletronico (e-mail):</b> <input type="e-mail" name="email" size="74"><p><b> ou</b></p>
-			<p id="pa"><b>Endereco físico (Rua, nº, complemento, Bairro):</b><br> <input type="text" name="endereco" size= 75>
-			<p id="pa"><b>Cidade:</b> <input type="text" name="cidade" size= 35><b> Estado</b>: 
+			<p id="pa"><b>Tipo do documento:</b> <input type="text" name="tipodoc" required="required"><b> Nº:</b> <input type="text" name="number" required="required">
+			<p id="ime"> <b>Endereco eletronico (e-mail):</b> <input type="e-mail" name="email" size="74" required="required"><p><b> ou</b></p>
+			<p id="pa"><b>Endereco físico (Rua, nº, complemento, Bairro):</b><br> <input type="text" name="endereco" size= 75 required="required">
+			<p id="pa"><b>Cidade:</b> <input type="text" name="cidade" size= 35 required="required"><b> Estado</b>: 
 			<select name="estados-brasil">
 	<option value="">Selecione</option>
 	<option value="AC">Acre</option>
@@ -122,6 +123,7 @@
 				<p><b> Órgão/Entidade destinatário do pedido: </b><br>  <input type="text" name="oedp" size = 100></p>
 				<p> <b>Forma preferencial de recebimento da resposta</b><br><input type="radio" name="fp" value="bcp"> Buscar/Consultar Pessoalmente <input type="radio" name="fp" value="eml"> E-mail <input type="radio" name="fp" value="pc"> Por carta (com custo)</p>
 				<p><b> Especificação do pedido: </b>  <br>  <textarea name="message" rows="10" cols="70"></textarea>
+				<p><b><button id="enviar" type="submit" name="myButton" value="foo">Enviar</button></b></p>
 		</form>	
 </body>
 </html>

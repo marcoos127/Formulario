@@ -72,4 +72,13 @@ input {
 }
 body {
 	font-family: arial;
+	margin: auto 380px auto 380px;
+	margin-top: 0px;
 }
+#logo {
+	margin-left: 650px;
+	margin-top: 0px;
+	margin-bottom: -45px;
+}
+#enviar {
+	margin-left: 20px;
