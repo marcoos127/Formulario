@@ -1,8 +1,10 @@
 #inter1 {
+	position: relative;
 	border-style: solid; 
 	border-width: 0px;
 	border-color: gray;
 	background-color: #DCDCDC;
+	width: 750px;
 	margin-top: 0px;
 }
 #inter2 {
@@ -11,8 +13,9 @@
 	border-style: solid;
 	border-width: 1px;
 	background-color: #DCDCDC;
-	margin-top: 1px;
 	border-color: #DCDCDC;
+	width: 740px;
+	margin-top: 1px;
 }
 #p2 {
 	position: relative;
@@ -21,11 +24,14 @@
 }
 #p1 {
 	margin-top: 20px;
+	
 }
 #bloco1 {
+	position: relative;
 	border-style: solid;
 	margin-top: 25px;
 	border-width: 2px;
+	width: 750px;
 }
 #borda2 {
 	position: relative;
@@ -35,11 +41,14 @@
 	background-color: #DCDCDC;
 	margin-top: 1px;
 	border-color: #DCDCDC;
+	width: 740px;
 }
 #bloco2 {
+	position: relative;
 	border-style: solid;
 	margin-top: 25px;
 	border-width: 2px;
+	width: 750px;
 }
 #borda3 {
 	position: relative;
@@ -49,14 +58,18 @@
 	background-color: #DCDCDC;
 	margin-top: 1px;
 	border-color: #DCDCDC;
+	width: 740px;
 }
 #bloco3 {
+	position: relative;
 	border-style: solid;
 	margin-top: 25px;
 	border-width: 2px;
+	width: 750px;
 }
 #p1 {
 	padding: 5px;
+	
 }
 #p3 {
 	padding: 5px;
@@ -72,13 +85,17 @@ input {
 }
 body {
 	font-family: arial;
-	margin: auto 380px auto 380px;
-	margin-top: 0px;
 }
 #logo {
-	margin-left: 650px;
+	position: relative;
 	margin-top: 0px;
 	margin-bottom: -45px;
+	left: 580px;
 }
 #enviar {
 	margin-left: 20px;
+}
+#all {
+	margin-left: 400px;
+	margin-right: 400px;
+}

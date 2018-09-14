@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formulário</title>
 	<script type ="text/javascript" src="js/funcoes.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
+	<div id="all">
 	<img id="logo" src="logo.png">
 	<p id="p2"><b>Formulário de Solicitação de informação <i>(Pessoa Física)</i></b></p>	
 	<div id="inter1"> </div>	
-	<div id="inter2">As informações abaixo são obrigatórias
+	<div id="inter2"><b>As informações abaixo são obrigatórias</b>
 	</div>
 	<div id="bloco1">
 		<form action="">
-			<p id="p1"><b>Nome</b>: <input type="text" name="nome" value="" size= 95 pattern="[a-z\s]+$" required="required"><br></p>
+			<p id="p1"><b>Nome</b>:<input type="text" name="nome" value="" size= 95 pattern="[a-z\s]+$" required="required"><br></p>
 			<p id="p3"><b>CPF: </b><input type="text" name="cpf" maxlength="11" onblur="return verificarCPF(this.value)"/></p><br>
 			 Ou, se preferir, informar outro documento de identificação (RG, CNH, Passaporte, RNE ou outro documento válido.  Se a opção for por RG, indicar órgão emissor e UF):
 			<p id="pa"><b>Tipo do documento:</b> <input type="text" name="tipodoc" required="required"><b> Nº:</b> <input type="text" name="number" required="required">
@@ -80,7 +82,7 @@
 	<option value="SP">SP</option>
 	<option value="TO">TO</option>
  			</select>
-			<p id="pa"><b>CEP: </b>    <input type="nº" name="cep"> <b>País: </b><input type="text" name="pais" size = 57>
+			<p id="pa"><b>CEP: </b>    <input type="nº" name="cep" required="required"> <b>País: </b><input type="text" name="pais" size = 57 required="required">
 			</div>
 			<div id="borda2"><b>Os campos a seguir são opcionais e se preenchidos contribuirão para a melhoria de nossos serviços</b></div>
 			<div id="bloco2">
@@ -123,7 +125,8 @@
 				<p><b> Órgão/Entidade destinatário do pedido: </b><br>  <input type="text" name="oedp" size = 100></p>
 				<p> <b>Forma preferencial de recebimento da resposta</b><br><input type="radio" name="fp" value="bcp"> Buscar/Consultar Pessoalmente <input type="radio" name="fp" value="eml"> E-mail <input type="radio" name="fp" value="pc"> Por carta (com custo)</p>
 				<p><b> Especificação do pedido: </b>  <br>  <textarea name="message" rows="10" cols="70"></textarea>
-				<p><b><button id="enviar" type="submit" name="myButton" value="foo">Enviar</button></b></p>
+				<p><b><button id="enviar" type="submit" name="myButton" value="foo">Enviar</button></b></p></div>
 		</form>	
+		</div>
 </body>
 </html>
